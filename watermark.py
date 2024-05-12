@@ -24,7 +24,7 @@ def main():
 
     if option == "Watermark an Image":
         # Collect image and watermark text
-        image = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
+        image = st.file_uploader("Upload Image", type=["png"])
         watermark_text = st.text_input("Enter Watermark Text")
 
         if st.button("Watermark"):
@@ -55,7 +55,7 @@ def main():
                 st.warning("Please upload an image and enter watermark text.")
     elif option == "Extract Watermark":
         # Collect watermark image and original watermark text
-        watermark_image = st.file_uploader("Upload Watermarked Image", type=["jpg", "jpeg", "png"])
+        watermark_image = st.file_uploader("Upload Watermarked Image", type=["png"])
         original_watermark_text = st.text_input("Enter Original Watermark Text")
 
         if st.button("Extract"):
