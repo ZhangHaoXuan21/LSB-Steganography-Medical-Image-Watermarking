@@ -1,6 +1,4 @@
 import streamlit as st
-import cv2
-import numpy as np
 import stepic as lsb_steg
 from PIL import Image
 
