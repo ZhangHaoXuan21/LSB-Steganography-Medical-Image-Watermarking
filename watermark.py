@@ -27,12 +27,13 @@ def main():
         image = st.file_uploader("Upload Image", type=["png"])
         watermark_text = st.text_input("Enter Watermark Text")
         
-        st.write("Original Image:")
-        # Display the image
-        st.image(image)
+        
 
         if st.button("Watermark"):
             if image is not None and watermark_text != "":
+                st.write("Original Image:")
+                # Display the image
+                st.image(image)
                 st.write("Watermarking image...")
                 # Convert uploaded image to PIL Image
                 image_pil = Image.open(image)
@@ -61,11 +62,12 @@ def main():
         # Collect watermark image and original watermark text
         watermark_image = st.file_uploader("Upload Watermarked Image", type=["png"])
         original_watermark_text = st.text_input("Enter Original Watermark Text")
-        st.write("Watermarked Image:")
-        # Display the image
-        st.image(watermark_image)
+       
         if st.button("Extract"):
             if watermark_image is not None and original_watermark_text != "":
+                st.write("Watermarked Image:")
+                # Display the image
+                st.image(watermark_image)
                 st.write("Extracting watermark...")
                 # Convert uploaded watermark image to PIL Image
                 watermark_pil = Image.open(watermark_image)
