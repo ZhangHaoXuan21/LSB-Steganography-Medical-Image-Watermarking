@@ -77,6 +77,7 @@ def main():
                 extracted_watermark_text = extract_watermark_text_from_image(watermark_pil_rgb)
             
                 st.write("Extraction completed.")
+                st.write(f"Original watermark text: {original_watermark_text}")
                 st.write(f"Extracted watermark text: {extracted_watermark_text}")
                  # Display success or warning message based on extracted watermark text
                 # Display success or warning message based on extracted watermark text
